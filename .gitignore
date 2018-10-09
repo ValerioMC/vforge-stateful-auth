@@ -39,3 +39,4 @@ web-ui/src-ui
 web-ui/target
 web-ui/node
 web-ui/dist
+rest-api/rest-api/target/h2db/db
