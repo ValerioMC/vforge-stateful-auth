@@ -1,4 +1,3 @@
-/target/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
@@ -11,16 +10,11 @@
 .sts4-cache
 
 ### Node ###
-/node/
 node_tmp/
 node_modules/
 npm-debug.log.*
 /.awcache/*
 /.cache-loader/*
-
-### Maven ###
-/log/
-/target/
 
 ### Packages ###
 *.jar
@@ -44,3 +38,9 @@ npm-debug.log.*
 /dist/
 /nbdist/
 /.nb-gradle/
+
+### Compiled path ###
+rest-api/target
+web-ui/src-ui
+web-ui/target
+web-ui/node
