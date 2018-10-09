@@ -1,12 +1,12 @@
 # vforge-stateful-auth
 Stateful authentication using two maven submodules with Spring Boot 2.0.5, Spring Security and Angular6
 
-##Build packaged war
+## Build packaged war
 To build a war file launch under rest-api folder
 
     mvn clean package
     
- ##Build indipendent project
+ ## Build indipendent project
 You can run the project as a frontend server and backend rest-api
 
 on `web-ui` launch `ng-serve` and go to `http://localhost:4200/`
