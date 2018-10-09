@@ -18,7 +18,7 @@ export class LoginService {
       encodeURIComponent(password.toString());
 
 
-    const headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
+    const headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded').set('Access-Control-Allow-Origin', 'http://localhost');
 
     return this.http.post('http://localhost:8080/api/authentication', data, { headers });
   }

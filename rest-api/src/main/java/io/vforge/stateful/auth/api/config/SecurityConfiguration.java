@@ -1,6 +1,8 @@
 package io.vforge.stateful.auth.api.config;
 
 
+import io.vforge.stateful.auth.api.config.ajax.AjaxAuthenticationFailureHandler;
+import io.vforge.stateful.auth.api.config.ajax.AjaxAuthenticationSuccessHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.BeanInitializationException;
 import org.springframework.context.annotation.Bean;
@@ -44,6 +46,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    public AjaxAuthenticationSuccessHandler ajaxAuthenticationSuccessHandler() {
+        return new AjaxAuthenticationSuccessHandler();
+    }
+
+    @Bean
+    public AjaxAuthenticationFailureHandler ajaxAuthenticationFailureHandler() {
+        return new AjaxAuthenticationFailureHandler();
+    }
+
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring()
@@ -63,6 +75,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                     .formLogin()
                     .loginProcessingUrl("/api/authentication")
+                    .successHandler(ajaxAuthenticationSuccessHandler())
+                    .failureHandler(ajaxAuthenticationFailureHandler())
                     .usernameParameter("username")
                     .passwordParameter("password")
                     .permitAll()
