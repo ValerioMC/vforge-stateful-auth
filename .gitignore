@@ -38,3 +38,4 @@ rest-api/target
 web-ui/src-ui
 web-ui/target
 web-ui/node
+web-ui/dist

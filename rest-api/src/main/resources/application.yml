@@ -1,7 +1,7 @@
 logging:
   level:
     ROOT: INFO
-    io.forge.dm: DEBUG
+    io.vforge.stateful: DEBUG
 
 spring:
   profiles:
