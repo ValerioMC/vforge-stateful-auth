@@ -16,12 +16,6 @@ npm-debug.log.*
 /.awcache/*
 /.cache-loader/*
 
-### Packages ###
-*.jar
-*.war
-*.ear
-*.db
-
 ### ESLint ###
 .eslintcache
 
