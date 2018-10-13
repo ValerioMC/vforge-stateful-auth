@@ -1,19 +1,37 @@
-# vforge-stateful-auth
-Stateful authentication using two maven submodules with Spring Boot 2.0.5, Spring Security and Angular6
+# VForge Stateful Authentication
+Stateful authentication using two maven submodules  with Spring Boot 2.0.5 backend and Angular6 frontend
+
+## WebUi
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+
+### Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+### Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+### Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+### Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+### Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+### Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+##RestApi
+
+Spring Boot backend project using a stateful security authentication
 
 ## Build packaged war
-To build a war file launch under rest-api folder
-
-    mvn clean package
-    
- ## Build indipendent project
-You can run the project as a frontend server and backend rest-api
-
-on `web-ui` launch `ng-serve` and go to `http://localhost:4200/`
-
-If you have not installed `angular-cli` you can install it with `npm install -g @angular/cli`
-
-On `vforge-stateful-auth` launch `mvn clean install` then under `rest-api` project `mvn spring-boot:run`
-
-This way you can acces your frontend application with live reload
-
+Run `mvn clean package` to build a `war` package and deploy in a servlet-engine
